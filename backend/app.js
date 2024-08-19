@@ -3,7 +3,7 @@ const app = express();
 app.use(express.json())
 
 //ROUTE IMPORT
-const product =require("./router/productRoute")
+const product =require("./routes/productRoute")
 app.use("/api/v1",product);
 
 
