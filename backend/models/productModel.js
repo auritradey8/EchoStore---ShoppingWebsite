@@ -17,7 +17,7 @@ const productSchema = mongoose.Schema({
     },
     rating:{
         type:Number,
-        defaule:0
+        default:0
     },
     images:{
         public_id:{
@@ -38,11 +38,21 @@ const productSchema = mongoose.Schema({
         required:[true,"Please Enter product Stock"],
         maxLength:[4,"Stock cannot exceed 4 characters"],
         default:0
-    },reviews:[
+    },
+    numOfReviews:{
+        type:Number,
+        default:0
+    },
+    reviews:[
         {
             name:{
                 type:String,
                 required:true,
+            },
+            rating:{
+                type:Number,
+                require:true
+
             },
             comment:{
                 type:String,
