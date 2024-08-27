@@ -9,7 +9,7 @@ module.exports = (err,req,res,next)=>{
 if(err.name === "CastError")
 {
     const message =`Resource not found. Invalid:$(err.path)`;
-    err = new ErrorHandler(message,400);
+    err = new ErrorHander(message,400);
 }
 
 //Mongoose duplicate key error
